@@ -1,0 +1,12 @@
+.metadata-form {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .metadata-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+  }
+  

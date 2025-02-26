@@ -1,0 +1,204 @@
+/* === Общие настройки === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+.api-title {
+  margin-bottom: 50px;
+}
+
+.api-method-container {
+  margin-bottom: 25px;
+}
+
+.api-method-container {
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+/* Общий стиль скроллбара */
+::-webkit-scrollbar {
+  width: 8px;
+  /* Ширина скроллбара */
+}
+
+/* Ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff4d4f, #ff7875);
+  /* Градиентный цвет */
+  border-radius: 6px;
+}
+
+.required {
+  color: #ff4d4f;
+}
+
+/* Фон скроллбара */
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  /* Светлый фон */
+  border-radius: 6px;
+}
+
+html,
+body {
+  overflow: hidden;
+
+  /* background: linear-gradient(180deg, #ff4d4f, #ff7875); */
+  /* border-radius: 6px; */
+  /* height: 100%; */
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  color: #212529;
+}
+
+.required {
+  color: #ff4d4f;
+}
+/* Фон скроллбара */
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Светлый фон */
+  border-radius: 6px;
+}
+
+.api-title {
+  margin-bottom: 50px;
+}
+
+.api-title {
+  margin-bottom: 50px;
+}
+
+.api-method-container {
+  margin-bottom: 25px;
+}
+
+.content-container {
+  max-width: 1440px;
+  margin: 0 auto; /* Центрирует блок по горизонтали */
+
+  /* padding: 20px; */
+}
+
+/* === Контейнер страницы === */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Основной контейнер приложения === */
+.app-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.body-content {
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  align-items: start;
+  width: calc(100% - 260px);
+  max-width: calc(100% - 260px);
+}
+
+/* === Основной контент === */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  /* Центрирование по горизонтали */
+  justify-content: center;
+  /* Центрирование по вертикали */
+  text-align: center;
+  padding: 20px;
+  min-height: calc(100vh - 100px);
+  /* Высота минус header (60px) и footer (40px) */
+
+  align-items: center; /* Центрирование по горизонтали */
+  justify-content: center; /* Центрирование по вертикали */
+  text-align: center;
+  padding: 20px;
+  min-height: calc(
+    100vh - 100px
+  ); /* Высота минус header (60px) и footer (40px) */
+}
+
+/* === Header (Шапка сайта) === */
+
+/* === Footer (Подвал) === */
+.footer {
+  width: 100%;
+  height: 40px;
+  background: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: fixed;
+  bottom: 0;
+  left: 0; */
+}
+
+/* === Адаптивность === */
+
+/* Планшеты (до 1024px) */
+@media screen and (max-width: 1024px) {
+  body {
+    overflow-y: scroll;
+  }
+
+  .body-content {
+    display: inline;
+  }
+
+  .content-container {
+    max-width: 90%;
+    padding: 10px;
+  }
+}
+
+/* Телефоны (до 768px) */
+@media screen and (max-width: 768px) {
+  .content {
+    align-items: flex-start;
+    padding: 10px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+    max-height: calc(100vh - 56px);
+    overflow: auto;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+}

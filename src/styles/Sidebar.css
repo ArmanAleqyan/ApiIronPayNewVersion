@@ -1,0 +1,120 @@
+.left-sidebar {
+  background-color: #f8f9fa;
+  height: calc(100vh - 60px); /* Высота минус header (60px) и footer (40px) */
+  overflow-y: auto;
+  scrollbar-width: none; /* Для Firefox */
+  border-right: 1px solid #ddd;
+  width: 260px;
+  padding: 15px;
+  overflow-y: auto;
+  border-right: 1px solid #dee2e6;
+}
+.sidebar-container::-webkit-scrollbar {
+  display: none; /* Для Chrome, Safari и Edge */
+}
+
+.sidebar-container {
+  padding: 10px 0;
+}
+
+.menu-section {
+  margin-bottom: 10px;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.menu-title:hover {
+  background: #e9ecef;
+}
+
+.arrow-icon {
+  transition: transform 0.3s;
+}
+
+.arrow-icon.open {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.submenu.open {
+  max-height: 500px;
+}
+
+.submenu-item {
+  padding: 6px 0;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+.submenu-item a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  color: #333;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.submenu-item a:hover {
+  background: #ff4c4c;
+  color: white;
+}
+
+.submenu-item .method-badge {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: white;
+  margin-left: 8px;
+}
+
+.method-badge.post {
+  background: #007bff;
+}
+
+.method-badge.get {
+  background: #28a745;
+}
+
+.active-link {
+  background: #ff4c4c;
+  color: white !important;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+  .left-sidebar {
+    position: fixed;
+    left: -260px;
+    top: 56px;
+    z-index: 1;
+    height: calc(100vh - 56px);
+    transition: left 0.2s linear;
+
+    &.opened {
+      padding: 15px;
+      left: 0;
+    }
+  }
+}
