@@ -1,4 +1,3 @@
-/* === Общие настройки === */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -92,7 +91,7 @@ body {
 .content-container {
   max-width: 1440px;
   margin: 0 auto; /* Центрирует блок по горизонтали */
-
+  position: relative;
   /* padding: 20px; */
 }
 
@@ -163,6 +162,15 @@ body {
 
 /* === Адаптивность === */
 
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+    max-height: calc(100vh - 56px);
+    overflow: auto;
+    justify-content: space-between;
+  }
+}
+
 /* Планшеты (до 1024px) */
 @media screen and (max-width: 1024px) {
   body {
@@ -177,6 +185,10 @@ body {
     max-width: 90%;
     padding: 10px;
   }
+  .wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /* Телефоны (до 768px) */
@@ -186,19 +198,11 @@ body {
     padding: 10px;
     text-align: left;
   }
-}
+  .wrapper {
+    max-height: calc(100dvh - 36px);
+  }
+  .left-sidebar {
+    max-height: calc(100dvh - 36px);
+  }
 
-@media screen and (max-width: 1200px) {
-  .wrapper {
-    flex-direction: column;
-    max-height: calc(100vh - 56px);
-    overflow: auto;
-    justify-content: space-between;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .wrapper {
-    width: 100%;
-    max-width: 100%;
-  }
 }

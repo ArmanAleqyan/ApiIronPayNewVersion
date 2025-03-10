@@ -141,11 +141,17 @@ const Payment = () => {
       <ol>
         <li>Карта</li>
         <br />
-        <li>SberPay</li>
+        <li>URL для перевода</li>
         <br />
         <li>СБП</li>
         <br />
         <li>Карта</li>
+        <br />
+        <li>СБП (e-com)</li>
+        <br />
+        <li>Трансгран</li>
+        <br />
+        <li>Номер Договора</li>
       </ol>
       <br />
 
