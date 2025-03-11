@@ -145,7 +145,7 @@ const Payment = () => {
         <br />
         <li>СБП</li>
         <br />
-        <li>Карта</li>
+        <li>Счёт</li>
         <br />
         <li>СБП (e-com)</li>
         <br />
