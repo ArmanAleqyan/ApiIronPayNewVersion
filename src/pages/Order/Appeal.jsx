@@ -202,7 +202,7 @@ const Appeal = () => {
     "status": true,
     "internal_order_id": 942672,
     "status_order": "Approved",
-    "is_appeal": 0,
+    "is_appeal": false,
     "message": "Order 942672 appeal"
 }
             `}
