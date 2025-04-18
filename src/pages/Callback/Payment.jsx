@@ -44,7 +44,7 @@ const CallbackPayment = () => {
               Сопоставить <code>external_order_id</code> – это ID заказа, связанный с вашим сервисом.
             </li>
             <li>
-              Определить текущий <code>status</code> заказа (например, "Confirmed" или "Canceled").
+              Определить текущий <code>status</code> заказа (например, "Approved" или "Canceled").
             </li>
             <li>
               Проверить временную метку <code>unix_time</code> и дату <code>created_at</code> для точности.

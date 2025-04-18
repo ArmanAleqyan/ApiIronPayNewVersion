@@ -11,6 +11,7 @@ import Oauth1 from "./pages/Auth/OAuth1";
 import Login from "./pages/Auth/Login";
 import Balance from "./pages/Balance";
 import Payment from "./pages/Order/Payment";
+import PaymentPage from "./pages/Order/PaymentPage";
 import Withdraw from "./pages/Order/Withdraw";
 import Status from "./pages/Order/Status";
 import Appeal from "./pages/Order/Appeal";
@@ -18,6 +19,7 @@ import OrderList from "./pages/Order/OrderList";
 import HoldAmounts from "./pages/Order/HoldAmounts";
 import CallbackPayment from "./pages/Callback/Payment";
 import AppealCallback from "./pages/Callback/Appeal";
+import Callbacks from "./pages/Callback/Callback";
 import HeaderInfo from "./pages/Api/Header";
 import Response from "./pages/Api/Response";
 import RefreshToken from "./pages/Auth/RefreshToken";
@@ -60,6 +62,10 @@ export const Routers = () => {
                   path="/payment"
                   element={<Payment />}
                 />
+                 <Route
+                  path="/paymentPage"
+                  element={<PaymentPage />}
+                />
                 <Route
                   path="/withdraw"
                   element={<Withdraw />}
@@ -79,6 +85,10 @@ export const Routers = () => {
                 <Route
                   path="/hold-amounts"
                   element={<HoldAmounts />}
+                />
+                     <Route
+                  path="/callbacks"
+                  element={<Callbacks />}
                 />
                 <Route
                   path="/payment-callback"

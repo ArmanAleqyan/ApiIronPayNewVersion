@@ -22,6 +22,7 @@ const menuItems = [
     title: "Order",
     subItems: [
       { name: "Payment", path: "/payment", method: "POST" },
+      { name: "PaymentPage", path: "/paymentPage", method: "POST" },
       { name: "Withdraw", path: "/withdraw", method: "POST" },
       { name: "Status Order", path: "/status-order", method: "POST" },
       { name: "Appeal", path: "/appeal", method: "POST" },
@@ -32,8 +33,9 @@ const menuItems = [
   {
     title: "Callback",
     subItems: [
-      { name: "Order", path: "/payment-callback", method: "" },
-      { name: "Appeal", path: "/appeal-callback", method: "" },
+      { name: "Callbacks", path: "/callbacks", method: "" },
+      // { name: "Order", path: "/payment-callback", method: "" },
+      // { name: "Appeal", path: "/appeal-callback", method: "" },
     ],
   },
   {
