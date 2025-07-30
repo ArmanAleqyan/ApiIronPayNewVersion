@@ -198,6 +198,7 @@ const Payment = () => {
               <td>string|url</td>
               <td>Ссылка для отправки callback.</td>
             </tr>
+           
     
           </tbody>
         </table>

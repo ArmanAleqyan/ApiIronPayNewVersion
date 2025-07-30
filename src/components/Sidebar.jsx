@@ -28,6 +28,7 @@ const menuItems = [
       { name: "Appeal", path: "/appeal", method: "POST" },
       { name: "Order List", path: "/order-list", method: "POST" },
       { name: "Hold Amounts", path: "/hold-amounts", method: "POST" },
+          { name: "Cancel", path: "/cancel", method: "POST" },
     ],
   },
   {

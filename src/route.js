@@ -14,6 +14,7 @@ import Payment from "./pages/Order/Payment";
 import PaymentPage from "./pages/Order/PaymentPage";
 import Withdraw from "./pages/Order/Withdraw";
 import Status from "./pages/Order/Status";
+import Cancel from "./pages/Order/Cancel";
 import Appeal from "./pages/Order/Appeal";
 import OrderList from "./pages/Order/OrderList";
 import HoldAmounts from "./pages/Order/HoldAmounts";
@@ -85,6 +86,10 @@ export const Routers = () => {
                 <Route
                   path="/hold-amounts"
                   element={<HoldAmounts />}
+                />
+                 <Route
+                  path="/cancel"
+                  element={<Cancel />}
                 />
                      <Route
                   path="/callbacks"

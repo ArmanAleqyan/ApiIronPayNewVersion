@@ -118,6 +118,11 @@ const OrderList = () => {
         Метод позволяет получить список ордеров за указанный временной интервал с возможностью фильтрации по типу ордера.
         <br />
         <br />
+        Для получения списка ордеров с пагинацией отправьте в body запроса номер нужной страницы, например: page=2.
+        <br />
+        Также вы можете указать желаемое количество ордеров на странице, передав параметр limit с нужным значением, например: limit=50.
+        <br />
+        <br />
         Указанный временный интервал не может быть больше  месяца.
  
       <br />
@@ -143,19 +148,29 @@ const OrderList = () => {
           </thead>
           <tbody>
             <tr>
-              <td><code>start_unix</code></td>
+              <td><code>start_unix<span className="required">*</span></code></td>
               <td>integer</td>
               <td>Unix timestamp начала временного интервала.</td>
             </tr>
             <tr>
-              <td><code>end_unix</code></td>
+              <td><code>end_unix<span className="required">*</span></code></td>
               <td>integer</td>
               <td>Unix timestamp окончания временного интервала.</td>
             </tr>
             <tr>
-              <td><code>type</code></td>
+              <td><code>type<span className="required">*</span></code></td>
               <td>string</td>
               <td>Тип ордера (payment или withdraw).</td>
+            </tr>
+             <tr>
+              <td><code>page</code></td>
+              <td>integer</td>
+              <td>Запрашиваемая страница.</td>
+            </tr>
+               <tr>
+              <td><code>limit</code></td>
+              <td>integer</td>
+              <td>Количество получаемых данных (default 100).</td>
             </tr>
           </tbody>
         </table>
@@ -215,7 +230,7 @@ const OrderList = () => {
         <h2>Ответы API</h2>
 
         <div className="response-block success">
-          <h3>Успешный ответ (200 OK)</h3>
+          <h3>Успешный ответ (200 OK) Без page</h3>
           <pre className="code-block">
             {`
 {
@@ -247,6 +262,38 @@ const OrderList = () => {
           </pre>
         </div>
  
+    <div className="response-block success">
+          <h3>Успешный ответ (200 OK) С page</h3>
+          <pre className="code-block">
+            {`
+{
+    "status": true,
+    "data": {
+        "current_page": 2,
+        "data": [
+            {
+            "internal_order_id": 1024571,
+            "time_unix": 1739194871,
+            "status_name": "Confirmed",
+            "external_order_id": "3234",
+            "status_id": 3,
+            "local_amount": "1",
+            "payment_type_id": 3,
+            "comment": null,
+            }
+        ],
+        "first_page_url": "/api/order_list?page=1",
+        "from": 2,
+        "next_page_url": "/api/order_list?page=3",
+        "path": "/api/order_list",
+        "per_page": "1",
+        "prev_page_url": "/api/order_list?page=1",
+        "to": 2
+    }
+}
+            `}
+          </pre>
+        </div>
     
 
         <div className="response-block error">
