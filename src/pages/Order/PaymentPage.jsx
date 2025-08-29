@@ -198,7 +198,11 @@ const Payment = () => {
               <td>string</td>
               <td>ID вашего клиента.</td>
             </tr>
-           
+            <tr>
+              <td><code>traffic_type</code></td>
+              <td>string</td>
+              <td>ftd - First time deposit <br /> std - Second time deposit  <br />mix - Mixed traffic </td>
+            </tr>
             <tr>
               <td><code>redirectUrl<span className="required">*</span></code></td>
               <td>string|url</td>
@@ -257,6 +261,7 @@ const Payment = () => {
               <td>number</td>
               <td>Время создания в формате UNIX.</td>
             </tr>
+            
             <tr>
               <td><code>curr</code></td>
               <td>string</td>

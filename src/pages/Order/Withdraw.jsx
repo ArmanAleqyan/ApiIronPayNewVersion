@@ -246,7 +246,12 @@ const Withdraw = () => {
               <td>string</td>
               <td>Название банка</td>
             </tr>
-    
+        <tr>
+              <td><code>callback_url<span className=""></span></code></td>
+              <td>string|url</td>
+              <td>Ссылка для отправки callback.</td>
+            </tr>
+           
           </tbody>
         </table>
       </div>

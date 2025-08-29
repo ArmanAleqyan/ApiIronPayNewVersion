@@ -194,6 +194,11 @@ const Payment = () => {
               <td>ID вашего клиента.</td>
             </tr>
             <tr>
+              <td><code>traffic_type</code></td>
+              <td>string</td>
+              <td>ftd - First time deposit <br /> std - Second time deposit  <br />mix - Mixed traffic </td>
+            </tr>
+            <tr>
               <td><code>callback_url<span className=""></span></code></td>
               <td>string|url</td>
               <td>Ссылка для отправки callback.</td>
