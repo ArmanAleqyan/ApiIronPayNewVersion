@@ -138,7 +138,7 @@ const Payment = () => {
      <br />
       <h2> Способы оплат(payment_type_id)</h2>
       <br />
-      <ol>
+     <ol style={{ paddingLeft: "21px" }}>
         <li>Карта</li>
         <br />
         <li>URL для перевода</li>
@@ -152,6 +152,12 @@ const Payment = () => {
         <li>Трансгран</li>
         <br />
         <li>Номер Договора</li>
+           <br />
+        <li>Трансгран Карта</li>
+             <br />
+        <li>TRC20</li>
+               <br />
+        <li>QrInvoice</li>
       </ol>
       <br />
 
@@ -266,6 +272,14 @@ const Payment = () => {
               <td>string</td>
               <td>Реквизит получателя.</td>
             </tr>
+           <tr>
+            <td><code>qr <br />qr_data</code></td>
+            <td>string</td>
+            <td>
+                При способе оплаты <b>QrInvoice</b> вы получаете эти поля. 
+                Поле <code>qr</code> содержит QR-код в формате <b>SVG</b>.
+            </td>
+        </tr>
             <tr>
               <td><code>rate</code></td>
               <td>string</td>

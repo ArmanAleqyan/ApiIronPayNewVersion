@@ -161,18 +161,7 @@ const Withdraw = () => {
         <li><a href="api-key">Через <code>API-Key</code> и <code>Merchant-ID</code> в заголовках</a></li>
       </ol>
       <br />
-      <h2> Способы оплат(payment_type_id)</h2>
-      <br />
-      <ol>
-        <li>Карта</li>
-        <br />
-        <li>SberPay</li>
-        <br />
-        <li>СБП</li>
-        <br />
-        <li>Карта</li>
-      </ol>
-      <br />
+    
 
       <div className="api-section">
         <h2>Request Body</h2>
@@ -212,7 +201,7 @@ const Withdraw = () => {
               <td>ID вашего клиента.</td>
             </tr>
             <tr>
-              <td><code>card_number,<br />sbp_number,<br />payment_url,<br /> acc_number,<br />iban_number</code> </td>
+              <td><code>card_number,<br />sbp_number,<br />payment_url,<br /> acc_number,<br />iban_number,<br />tron_address</code> </td>
               <td>string</td>
               <td>Реквизит получателя.</td>
             </tr>

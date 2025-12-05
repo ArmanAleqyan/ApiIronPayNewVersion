@@ -143,7 +143,7 @@ const Payment = () => {
      <br />
       <h2> Способы оплат(payment_type_id)</h2>
       <br />
-      <ol>
+      <ol style={{ paddingLeft: "21px" }}>
         <li>Карта</li>
         <br />
         <li>URL для перевода</li>
@@ -157,6 +157,12 @@ const Payment = () => {
         <li>Трансгран</li>
         <br />
         <li>Номер Договора</li>
+        <br />
+        <li>Трансгран Карта</li>
+        <br />
+        <li>TRC20</li>
+                       <br />
+        <li>QrInvoice</li>
       </ol>
       <br />
 
