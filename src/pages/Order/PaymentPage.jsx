@@ -229,7 +229,24 @@ const Payment = () => {
               <td>string|url</td>
               <td>Ссылка для отправки callback.</td>
             </tr>
-           
+              <tr>
+              <td><code>allow_changed_amount</code></td>
+              <td>number</td>
+              <td>
+                Флаг, управляющий возможностью работы с инкрементом на вашей стороне.
+                <br />
+                <strong>1</strong> — инкремент разрешен
+                <br />
+                <strong>0</strong> — инкремент запрещен
+                <br/><br/>  Для глобального включения обратитесь в службу поддержки
+                <br /><br />
+                В ответ с таким запросом передаем allow_changed_amount (true/false)
+amount_options (новая сумма заявки) <br /><br />
+
+Если allow_changed_amount (true/false) не передали в запросе- то считаем false и инкремент не применяем
+              </td>
+            </tr>
+
           </tbody>
         </table>
       </div>
@@ -283,6 +300,16 @@ const Payment = () => {
               <td>url</td>
               <td>Ссылка на окно платежа.</td>
             </tr>
+                <tr>
+              <td><code>amount_options</code></td>
+              <td>string</td>
+              <td>При работе с  инкрементом. <br />В options отдаем только одно значение суммы, на которое сразу создается ордер</td>
+            </tr>
+             <tr>
+              <td><code>allowChangedAmount</code></td>
+              <td>boolean</td>
+             <td>При работе с  инкрементом. <br />Если изначально запрошенная сумма свободная- то в ответе будет allow_changed_amount = false, amount_options = изначально запрошенной.</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -303,7 +330,9 @@ const Payment = () => {
         "local_amount": "100",
         "rate": "83.24",
         "amount_usdt": "1.20",
-        "redirect_url": "https://window.io/d62f8c329d1c0917d233f9eee2db85933179216a"
+        "redirect_url": "https://window.io/d62f8c329d1c0917d233f9eee2db85933179216a",
+        "amount_options": "2",
+        "allowChangedAmount": true,
     }
 }
             `}

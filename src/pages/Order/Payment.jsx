@@ -209,6 +209,24 @@ const Payment = () => {
               <td>string|url</td>
               <td>Ссылка для отправки callback.</td>
             </tr>
+           <tr>
+              <td><code>allow_changed_amount</code></td>
+              <td>number</td>
+              <td>
+                Флаг, управляющий возможностью работы с инкрементом на вашей стороне.
+                <br />
+                <strong>1</strong> — инкремент разрешен
+                <br />
+                <strong>0</strong> — инкремент запрещен
+                <br/><br/>  Для глобального включения обратитесь в службу поддержки
+                <br /><br />
+                В ответ с таким запросом передаем allow_changed_amount (true/false)
+amount_options (новая сумма заявки) <br /><br />
+
+Если allow_changed_amount (true/false) не передали в запросе- то считаем false и инкремент не применяем
+              </td>
+            </tr>
+
            
     
           </tbody>
@@ -285,6 +303,16 @@ const Payment = () => {
               <td>string</td>
               <td>Курс USDT создания платежа.</td>
             </tr>
+            <tr>
+              <td><code>amount_options</code></td>
+              <td>string</td>
+              <td>При работе с  инкрементом. <br />В options отдаем только одно значение суммы, на которое сразу создается ордер</td>
+            </tr>
+             <tr>
+              <td><code>allowChangedAmount</code></td>
+              <td>boolean</td>
+             <td>При работе с  инкрементом. <br />Если изначально запрошенная сумма свободная- то в ответе будет allow_changed_amount = false, amount_options = изначально запрошенной.</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -308,6 +336,8 @@ const Payment = () => {
                     "short_name": "Юрий И.",
                     "bank_name": "Ингосстрах Банк",
                     "sbp_number": "+72432423423",
+                    "amount_options": "2",
+                    "allowChangedAmount": true,
                     "rate" : "83.24"
                 }
             }
