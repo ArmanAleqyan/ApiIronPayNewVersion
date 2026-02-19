@@ -291,6 +291,11 @@ const Withdraw = () => {
               <td>number</td>
               <td>Способы оплаты</td>
             </tr>
+             <tr>
+              <td><code>commission_local</code></td>
+              <td>integer</td>
+              <td>Комиссия в валюте выплаты, которая будет удержана с мерчанта при успешной оплате.</td>
+            </tr>
           </tbody>
         </table>
       </div>

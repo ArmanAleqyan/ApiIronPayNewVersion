@@ -158,6 +158,8 @@ const Payment = () => {
         <li>TRC20</li>
                <br />
         <li>QrInvoice</li>
+                 <br />
+        <li>Sim</li>
       </ol>
       <br />
 
@@ -286,7 +288,7 @@ amount_options (новая сумма заявки) <br /><br />
               <td>Имя получателя.</td>
             </tr>
             <tr>
-              <td><code>sbp_number, <br />card_number,<br />url,<br />account_number</code></td>
+              <td><code>sbp_number, <br />card_number,<br />url,<br />account_number <br />phone_number</code></td>
               <td>string</td>
               <td>Реквизит получателя.</td>
             </tr>
@@ -312,6 +314,11 @@ amount_options (новая сумма заявки) <br /><br />
               <td><code>allowChangedAmount</code></td>
               <td>boolean</td>
              <td>При работе с  инкрементом. <br />Если изначально запрошенная сумма свободная- то в ответе будет allow_changed_amount = false, amount_options = изначально запрошенной.</td>
+            </tr>
+              <tr>
+              <td><code>commission_local</code></td>
+              <td>integer</td>
+              <td>Комиссия в валюте платежа, которая будет удержана с мерчанта при успешной оплате.</td>
             </tr>
           </tbody>
         </table>

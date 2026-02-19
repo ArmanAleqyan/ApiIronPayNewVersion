@@ -16,6 +16,8 @@ import Withdraw from "./pages/Order/Withdraw";
 import Status from "./pages/Order/Status";
 import Cancel from "./pages/Order/Cancel";
 import Appeal from "./pages/Order/Appeal";
+import WithdrawLimit from "./pages/Order/WithdrawLimit";
+import AttachFileToOrder from "./pages/Order/AttachFileToOrder";
 import OrderList from "./pages/Order/OrderList";
 import HoldAmounts from "./pages/Order/HoldAmounts";
 import CallbackPayment from "./pages/Callback/Payment";
@@ -23,6 +25,7 @@ import AppealCallback from "./pages/Callback/Appeal";
 import Callbacks from "./pages/Callback/Callback";
 import HeaderInfo from "./pages/Api/Header";
 import Response from "./pages/Api/Response";
+import Statuses from "./pages/Api/Statuses";
 import RefreshToken from "./pages/Auth/RefreshToken";
 import RequestComponent from "./components/RequestBox";
 import ScrollToTop from "./utils/ScrollToTop";
@@ -50,6 +53,10 @@ export const Routers = () => {
                 <Route
                   path="/api-key"
                   element={<Oauth1 />}
+                />
+                <Route
+                  path="/withdraw_limit"
+                  element={<WithdrawLimit />}
                 />
                 <Route
                   path="/login"
@@ -110,6 +117,14 @@ export const Routers = () => {
                 <Route
                   path="/response"
                   element={<Response />}
+                />
+                     <Route
+                  path="/status"
+                  element={<Statuses />}
+                />
+                   <Route
+                  path="/AttachFileToOrder"
+                  element={<AttachFileToOrder />}
                 />
 
                 <Route

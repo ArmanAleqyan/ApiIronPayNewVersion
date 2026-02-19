@@ -24,8 +24,10 @@ const menuItems = [
       { name: "Payment", path: "/payment", method: "POST" },
       { name: "PaymentPage", path: "/paymentPage", method: "POST" },
       { name: "Withdraw", path: "/withdraw", method: "POST" },
+       { name: "Withdraw Limit", path: "/withdraw_limit", method: "GET" },
       { name: "Status Order", path: "/status-order", method: "POST" },
       { name: "Appeal", path: "/appeal", method: "POST" },
+      { name: "File to order", path: "/AttachFileToOrder", method: "POST" },
       { name: "Order List", path: "/order-list", method: "POST" },
       { name: "Hold Amounts", path: "/hold-amounts", method: "POST" },
           { name: "Cancel", path: "/cancel", method: "POST" },
@@ -45,6 +47,8 @@ const menuItems = [
       { name: "Header", path: "/header", method: "" },
 
       { name: "Response", path: "/response", method: "" },
+
+      { name: "Status", path: "/status", method: "" },
     ],
   },
 ];
